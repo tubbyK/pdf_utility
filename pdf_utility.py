@@ -24,9 +24,7 @@ def split_pdf():
     pdfs = get_filenames()
     for pdf in pdfs:
         basefld = os.path.dirname(pdf) + '/'
-        print(basefld)
         pdf_name = os.path.basename(pdf).split('.')[0]
-        print(pdf_name)
         pdf_to_split = PdfFileReader(open(pdf, "rb"))
         for i in range(pdf_to_split.numPages):
             pdf_out = PdfFileWriter()
